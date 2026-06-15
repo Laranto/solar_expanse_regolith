@@ -1,0 +1,108 @@
+build_regolith_processing:
+  facilityType: Production
+  name: Regolith Electrolysis
+  description: A small facility that splits regolith into its components.
+  possiblePlacement: Surface
+  maintenanceCostPerDay: 10
+  energyConsumption: 5
+  needWorkersToWork: 15
+  specialAbility: Refiner
+  specialAbilityParameter: 0
+  upkeepStacking: false
+  upkeepStackingValue: 0
+  blockStacking: false
+  canBuildBy: None
+  icon: build_regolith_hydrogen_reduction_plant.png
+  timeToBuildInDays: 50
+  constructionEquipmentCountIsRequired: true
+  facilityItemClass: RefineryFacility
+  buildCost: 0
+  buildResources:
+    id_resource_metal: 50
+    id_resource_steel: 50
+  energyProduction: 0
+  solarPanels: false
+  windPower: false
+  geothermal: false
+  energyStorage: 0
+  resourceExplorationBonus: 1
+  refinerInput:
+    id_resource_regolith: 0.2
+    id_resource_hydrogen: 0.1
+  refinerOutput:
+    # About 45% of the regolith is oxygen. With the added hydrogen over half the output is water, ready to split again in electrolysis
+    id_resource_water: 0.15 # 50%
+    id_resource_metal: 0.05 # 16.6%
+    id_resource_silicon: 0.04 # 13.3%
+    id_resource_volatile: 0.01 # 3.3%
+    id_resource_raremetal: 0.01 # 3.3%
+    # Intended inefficency in smaller scale, losing some material into the void
+    
+build_regolith_processing_big:
+  facilityType: Production
+  name: Large Regolith Electrolysis
+  description: Large complex that splits regolith into its components with high resource efficiency.
+  possiblePlacement: Surface
+  maintenanceCostPerDay: 100
+  energyConsumption: 100
+  needWorkersToWork: 100
+  specialAbility: Refiner
+  specialAbilityParameter: 0
+  upkeepStacking: false
+  upkeepStackingValue: 0
+  blockStacking: false
+  canBuildBy: None
+  icon: build_regolith_hydrogen_reduction_plant.png
+  timeToBuildInDays: 150
+  constructionEquipmentCountIsRequired: true
+  facilityItemClass: RefineryFacility
+  buildCost: 0
+  buildResources:
+    id_resource_steel: 500
+    id_resource_chips: 50
+    id_resource_glass: 200
+  energyProduction: 0
+  solarPanels: false
+  windPower: false
+  geothermal: false
+  energyStorage: 0
+  resourceExplorationBonus: 1
+  refinerInput:
+    id_resource_regolith: 4.0
+    id_resource_hydrogen: 2.0
+  refinerOutput:
+    id_resource_water: 3.0 # 50%
+    id_resource_metal: 1.5 # 25%
+    id_resource_silicon: 1.0 # 16.6%
+    id_resource_volatile: 0.25 # 4.16%
+    id_resource_raremetal: 0.25 # 4.16&
+    
+build_regolithmine:
+  facilityType: Mining
+  name: Regolith Mining Base
+  description: Gathers or crushes larger rocks into useable regolith.
+  possiblePlacement: Surface
+  maintenanceCostPerDay: 10
+  energyConsumption: 0.5
+  needWorkersToWork: 5
+  specialAbility: None
+  specialAbilityParameter: 2
+  upkeepStacking: false
+  upkeepStackingValue: 5
+  blockStacking: false
+  canBuildBy: None
+  icon: build_regolithmine.png
+  timeToBuildInDays: 50
+  constructionEquipmentCountIsRequired: true
+  facilityItemClass: MiningFacility
+  buildCost: 0
+  buildResources:
+    id_resource_metal: 125
+  energyProduction: 0
+  solarPanels: false
+  windPower: false
+  geothermal: false
+  energyStorage: 0
+  resourceExplorationBonus: 1
+  resourcesToMine:
+    - id_resource_regolith

@@ -1,0 +1,14 @@
+# Regolith research unlock patches.
+#
+# Teddit appends these unlocks to the stock research definitions because
+# replaceUnlocks is omitted. Each orbital facility here unlocks with the
+# research that unlocks its surface counterpart in dump/research.yaml.
+
+research_mine_2:
+  unlocks:
+    - action: UnlockFacility
+      id: build_regolith_processing
+    - action: UnlockFacility
+      id: build_regolith_processing_big
+    - action: UnlockFacility
+      id: build_regolithmine
