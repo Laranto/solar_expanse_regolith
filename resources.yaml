@@ -1,0 +1,14 @@
+id_resource_regolith:
+  cloneFrom: id_resource_silicon
+  resourceType: Normal
+  icon: regolith.png
+  name: Metal-Rich Regolith
+  description: Rock rich in various metals chemically bound to oxygen.
+  marketClearingPriceBase: 100.0
+  priceChangeMultiplier: 1.1
+  startingSummedPreviousTradesQuantity: 1000.0
+  startingPreviousTradesCount: 5.0
+  toSortMarketOffer: 30
+  showOnUI: true
+  canBeLeftOnObject: true
+  showInMarket: true
